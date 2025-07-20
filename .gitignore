@@ -1,0 +1,36 @@
+# Unreal Engine
+
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
+
+# Visual Studio files
+*.VC.db
+*.VC.VC.opendb
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Linux
+*.swp
+
+# Logs
+*.log
+
+# Auto-generated files
+*.generated.h
+*.generated.cpp
+
+# User-specific files
+*.user
+*.userprefs
+
+# Ignore any packaged builds
+Packaged/
+
+# Ignore build scripts output
+Build/
+

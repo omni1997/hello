@@ -1,0 +1,911 @@
+{
+	"folders": [
+		{
+			"name": "hello",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "hello Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Test",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Test",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Test",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Shipping",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Shipping",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"Linux",
+					"Shipping",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Test",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Test",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Test",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Shipping",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Shipping",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"hello LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "hello LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"hello",
+					"LinuxArm64",
+					"Shipping",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"helloEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"Debug",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"helloEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"DebugGame",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"helloEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"label": "helloEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"helloEditor",
+					"Linux",
+					"Development",
+					"/home/omni/Documents/unreal/hello/hello.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch hello (Debug)",
+				"request": "launch",
+				"program": "/home/omni/Documents/unreal/hello/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "hello Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch hello (DebugGame)",
+				"request": "launch",
+				"program": "/home/omni/Documents/unreal/hello/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "hello Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch hello (Development)",
+				"request": "launch",
+				"program": "/home/omni/Documents/unreal/hello/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "hello Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch hello (Test)",
+				"request": "launch",
+				"program": "/home/omni/Documents/unreal/hello/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "hello Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch hello (Shipping)",
+				"request": "launch",
+				"program": "/home/omni/Documents/unreal/hello/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "hello Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch helloEditor (Debug)",
+				"request": "launch",
+				"program": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "helloEditor Linux Debug Build",
+				"args": [
+					"/home/omni/Documents/unreal/hello/hello.uproject"
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch helloEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "helloEditor Linux DebugGame Build",
+				"args": [
+					"/home/omni/Documents/unreal/hello/hello.uproject"
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Launch helloEditor (Development)",
+				"request": "launch",
+				"program": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "helloEditor Linux Development Build",
+				"args": [
+					"/home/omni/Documents/unreal/hello/hello.uproject"
+				],
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0",
+				"type": "cppdbg",
+				"visualizerFile": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/hello": "/home/omni/Documents/unreal/hello",
+					"/UEVFS/Root": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/omni/Documents/unreal/hello/hello.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/omni/Bureau/Linux_Unreal_Engine_5.6.0"
+			}
+		]
+	}
+}
